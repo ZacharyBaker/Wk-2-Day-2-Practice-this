@@ -54,11 +54,14 @@ var user = {
 user.getUserName();
 
 //Next Problem
+//-----------------------------------
 
-
-// Write the function definitions which will make the following function invocations function properly.
+// Write the function definitions which will
+// make the following function invocations function properly.
 
   //Function Invocations Here
+
+
 
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
@@ -66,7 +69,11 @@ var mustang = new Car('Ford', 'Mustang', 2013);
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
-//Hint, you'll need to write a moveCar function which is added to every object that is being returned from the Car function. You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the write object (prius vs mustang).
+//Hint, you'll need to write a moveCar function which is 
+//added to every object that is being returned from the Car 
+//function. You'll also need to use the 'this' keyword
+// properly in order to make sure you're invoking
+// moveCar on the write object (prius vs mustang).
 
 
 
@@ -76,7 +83,13 @@ var getYear = function(){
   return this.year;
 };
 
-//Above you're given the getYear function. Using your prius and mustang objects from above, use the proper syntax that will allow for you to call the getYear function with the prius then the mustang objects being the focal objects. *Don't add getYear as a property on both objects*.
+//Above you're given the getYear function. 
+//Using your prius and mustang objects from 
+//above, use the proper syntax that will
+// allow for you to call the getYear
+// function with the prius then the 
+//mustang objects being the focal objects.
+// *Don't add getYear as a property on both objects*.
 
   //Code Here
 
@@ -98,12 +111,23 @@ var getUsername = function(){
 
 setTimeout(getUsername, 5000);
 
-//Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
+//Above you're given an object, a function, 
+//and a setTimeout invocation. After 5 seconds,
+// what will the getUsername function return?
 
   //Answer Here
+//undefined
+
 
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
+//the object window
 
-//Fix the setTimeout invocation so that the user object will be the focal object when getUsername is ran.
+
+//Fix the setTimeout invocation so that the user
+// object will be the focal object when getUsername is ran.
+setTimeout(getUsername.bind(user), 5000);
+
+//------------------ the above code works, but when i use the call function, it doesn't wait
+//-------------------- the five seconds before logging the username???
