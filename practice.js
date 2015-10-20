@@ -131,3 +131,4 @@ setTimeout(getUsername.bind(user), 5000);
 
 //------------------ the above code works, but when i use the call function, it doesn't wait
 //-------------------- the five seconds before logging the username???
+//i want green squares!!!!!
